@@ -25,5 +25,12 @@ df = pd.concat([addNews, df], ignore_index=True)
 df.to_csv('news_database.csv', index=False, encoding='shift-jis', header=None)
 
 latestDateFile = open('latestDate.txt', 'w', newline='')
-latestDateFile.write(addNews.iloc[0, 0])
+
+if addNews.shape[0] != 0:
+    latestDateFile.write(addNews.iloc[0, 0])
+else:
+    latestDateFile.write(latestDate)
+
 latestDateFile.close()
+
+print("End of rss_parser.py")
