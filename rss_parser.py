@@ -1,3 +1,7 @@
+import sys
+import pprint
+pprint.pprint(sys.path)
+
 import feedparser
 import pandas as pd
 from funcs import *
