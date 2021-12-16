@@ -1,6 +1,7 @@
 import sys
 import pprint
 pprint.pprint(sys.path)
+sys.path.append('/home/ec2-user/.local/lib/python3.7/site-packages')
 
 import feedparser
 import pandas as pd
